@@ -4,7 +4,7 @@ import { prisma } from '@/lib/prisma'
 export async function POST(req: Request) {
   const { email, secretKey } = await req.json()
 
-  if (!process.env.ADMIN_SETUP_KEY || secretKey !== process.env.ADMIN_SETUP_KEY) {
+  if (!process.env.ADMIN_SETUP_KEY || secretKey.trim() !== process.env.ADMIN_SETUP_KEY.trim()) {
     return NextResponse.json({ error: 'Clé secrète invalide.' }, { status: 403 })
   }
 
