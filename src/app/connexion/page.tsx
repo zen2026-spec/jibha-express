@@ -105,18 +105,26 @@ export default function ConnexionPage() {
     if (!validate()) return;
     setIsSubmitting(true);
 
-    const result = await signIn('credentials', {
-      email: formData.email,
-      password: formData.password,
-      redirect: false,
-    });
+    try {
+      const result = await signIn('credentials', {
+        email: formData.email,
+        password: formData.password,
+        redirect: false,
+      });
 
-    setIsSubmitting(false);
+      setIsSubmitting(false);
 
-    if (result?.error) {
-      setErrors({ general: 'Identifiants incorrects ou compte inexistant.' });
-    } else {
-      router.push('/espace-client');
+      if (!result) {
+        setErrors({ general: 'Erreur de connexion. Veuillez réessayer.' });
+      } else if (result.error) {
+        setErrors({ general: 'Identifiants incorrects ou compte inexistant.' });
+      } else {
+        router.push('/espace-client');
+        router.refresh();
+      }
+    } catch {
+      setIsSubmitting(false);
+      setErrors({ general: 'Erreur réseau. Veuillez réessayer.' });
     }
   };
 
