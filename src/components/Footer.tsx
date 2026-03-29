@@ -170,7 +170,7 @@ export default function Footer() {
                   aria-label={label}
                   className={`flex items-center justify-center w-9 h-9 rounded-lg bg-white/10 text-gray-400 hover:text-white transition-all duration-200 ${color}`}
                 >
-                  <Icon className="w-4 h-4" strokeWidth={1.75} />
+                  <Icon className="w-4 h-4" />
                 </a>
               ))}
             </div>
