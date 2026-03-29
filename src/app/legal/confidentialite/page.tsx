@@ -197,7 +197,7 @@ export default function ConfidentialitePage() {
                 suivantes, dans le strict cadre des finalités décrites ci-dessus :
               </p>
               <ul className="list-disc list-inside space-y-2 text-slate-600 text-sm">
-                <li>Transporteurs partenaires (DHL, FedEx, UPS, Tawssil) — pour la livraison</li>
+                <li>Transporteurs partenaires (DHL, FedEx, UPS, LAST MILE EXPRESS) — pour la livraison</li>
                 <li>Agents en douane — pour le dédouanement au Maroc</li>
                 <li>
                   Prestataires de paiement (Stripe, PayPal) — pour le traitement sécurisé des

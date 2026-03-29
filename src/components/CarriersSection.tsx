@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import {
   Package,
   Truck,
@@ -16,12 +17,11 @@ type Carrier = {
   subtitle: string
   transit: string
   basePrice: number
-  color: string
   bgColor: string
   borderColor: string
   textColor: string
   badgeColor: string
-  logo: string
+  logoPath: string
 }
 
 const CARRIERS: Carrier[] = [
@@ -31,12 +31,11 @@ const CARRIERS: Carrier[] = [
     subtitle: 'Express international',
     transit: '2–3 jours ouvrables',
     basePrice: 28.5,
-    color: 'from-yellow-400 to-yellow-500',
     bgColor: 'bg-yellow-50',
     borderColor: 'border-yellow-200',
     textColor: 'text-yellow-700',
     badgeColor: 'bg-yellow-100 text-yellow-800',
-    logo: 'DHL',
+    logoPath: '/logos/dhl.png',
   },
   {
     id: 'fedex',
@@ -44,12 +43,11 @@ const CARRIERS: Carrier[] = [
     subtitle: 'International Priority',
     transit: '3–4 jours ouvrables',
     basePrice: 24.9,
-    color: 'from-violet-500 to-orange-500',
     bgColor: 'bg-violet-50',
     borderColor: 'border-violet-200',
     textColor: 'text-violet-700',
     badgeColor: 'bg-violet-100 text-violet-800',
-    logo: 'FedEx',
+    logoPath: '/logos/fedex.png',
   },
   {
     id: 'ups',
@@ -57,25 +55,23 @@ const CARRIERS: Carrier[] = [
     subtitle: 'Worldwide Express',
     transit: '3–5 jours ouvrables',
     basePrice: 22.0,
-    color: 'from-amber-700 to-amber-800',
     bgColor: 'bg-amber-50',
     borderColor: 'border-amber-200',
     textColor: 'text-amber-800',
     badgeColor: 'bg-amber-100 text-amber-900',
-    logo: 'UPS',
+    logoPath: '/logos/ups.png',
   },
   {
-    id: 'tawssil',
-    name: 'Tawssil',
+    id: 'last-mile-express',
+    name: 'LAST MILE EXPRESS',
     subtitle: 'Consolidation Maroc',
     transit: '7–10 jours ouvrables',
     basePrice: 9.9,
-    color: 'from-green-500 to-emerald-600',
     bgColor: 'bg-green-50',
     borderColor: 'border-green-200',
     textColor: 'text-green-700',
     badgeColor: 'bg-green-100 text-green-800',
-    logo: 'TWS',
+    logoPath: '/logos/last-mile-express.png',
   },
 ]
 
@@ -102,12 +98,14 @@ function CarrierCard({ carrier }: { carrier: Carrier }) {
     >
       {/* Logo area */}
       <div className="flex items-center gap-3">
-        <div
-          className={`w-14 h-14 rounded-xl bg-gradient-to-br ${carrier.color} flex items-center justify-center shadow-md`}
-        >
-          <span className="text-white font-black text-sm tracking-tight leading-none text-center px-1">
-            {carrier.logo}
-          </span>
+        <div className="w-14 h-14 rounded-xl bg-white border border-slate-100 flex items-center justify-center shadow-md overflow-hidden p-1">
+          <Image
+            src={carrier.logoPath}
+            alt={carrier.name}
+            width={48}
+            height={48}
+            className="object-contain w-full h-full"
+          />
         </div>
         <div>
           <p className="font-bold text-slate-900 text-base leading-tight">

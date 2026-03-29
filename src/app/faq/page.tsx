@@ -23,7 +23,7 @@ const FAQ_CATEGORIES: FaqCategory[] = [
     items: [
       {
         q: "Qu'est-ce que JibhaExpress ?",
-        a: "JibhaExpress est un service de réexpédition de colis basé au Portugal. Nous vous fournissons une adresse postale virtuelle portugaise que vous pouvez utiliser pour acheter sur les boutiques en ligne européennes — puis nous regroupons et expédions vos colis directement à votre domicile au Maroc. Grâce à notre réseau de partenaires logistiques (DHL, FedEx, UPS, Tawssil), nous garantissons des livraisons fiables, rapides et abordables depuis l'Europe jusqu'à votre porte.",
+        a: "JibhaExpress est un service de réexpédition de colis basé au Portugal. Nous vous fournissons une adresse postale virtuelle portugaise que vous pouvez utiliser pour acheter sur les boutiques en ligne européennes — puis nous regroupons et expédions vos colis directement à votre domicile au Maroc. Grâce à notre réseau de partenaires logistiques (DHL, FedEx, UPS, LAST MILE EXPRESS), nous garantissons des livraisons fiables, rapides et abordables depuis l'Europe jusqu'à votre porte.",
       },
       {
         q: 'Comment fonctionne la réexpédition ?',

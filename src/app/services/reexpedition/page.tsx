@@ -16,14 +16,14 @@ import {
 export const metadata: Metadata = {
   title: 'Réexpédition Portugal → Maroc | JibhaExpress',
   description:
-    'Recevez vos colis sur votre adresse virtuelle au Portugal et faites-les expédier au Maroc en 5 à 7 jours. DHL, FedEx, UPS, Tawssil — suivi inclus, dédouanement géré.',
+    'Recevez vos colis sur votre adresse virtuelle au Portugal et faites-les expédier au Maroc en 5 à 7 jours. DHL, FedEx, UPS, LAST MILE EXPRESS — suivi inclus, dédouanement géré.',
 };
 
 const CARRIERS = [
   { name: 'DHL', color: 'bg-yellow-400 text-yellow-900' },
   { name: 'FedEx', color: 'bg-violet-600 text-white' },
   { name: 'UPS', color: 'bg-amber-700 text-white' },
-  { name: 'Tawssil', color: 'bg-green-600 text-white' },
+  { name: 'LAST MILE EXPRESS', color: 'bg-green-600 text-white' },
 ];
 
 const FEATURES = [
@@ -45,7 +45,7 @@ const FEATURES = [
     icon: Truck,
     title: 'Transporteurs de confiance',
     description:
-      'Choisissez parmi DHL, FedEx, UPS et Tawssil selon votre budget et vos délais souhaités.',
+      'Choisissez parmi DHL, FedEx, UPS et LAST MILE EXPRESS selon votre budget et vos délais souhaités.',
     color: 'bg-violet-100 text-violet-600',
   },
   {

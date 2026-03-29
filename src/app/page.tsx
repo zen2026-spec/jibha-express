@@ -139,7 +139,7 @@ const jsonLd = {
           name: 'Combien coûte la livraison au Maroc ?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Les frais de livraison varient selon le poids et le transporteur choisi. Le prix de base part de €9,90/kg avec Tawssil jusqu\'à €28,50/kg avec DHL Express. Utilisez notre simulateur de prix pour obtenir une estimation précise.',
+            text: 'Les frais de livraison varient selon le poids et le transporteur choisi. Le prix de base part de €9,90/kg avec LAST MILE EXPRESS jusqu\'à €28,50/kg avec DHL Express. Utilisez notre simulateur de prix pour obtenir une estimation précise.',
           },
         },
         {

@@ -63,12 +63,12 @@ const STEPS = [
     title: 'Recevoir au Maroc',
     subtitle: 'Livraison à domicile partout au Maroc',
     description:
-      "Nous prenons en charge l'emballage, les formalités douanières et l'expédition. Votre colis arrive chez vous en 10 à 15 jours ouvrés via DHL, FedEx ou Tawssil.",
+      "Nous prenons en charge l'emballage, les formalités douanières et l'expédition. Votre colis arrive chez vous en 10 à 15 jours ouvrés via DHL, FedEx ou LAST MILE EXPRESS.",
     details: [
       'Dédouanement géré par nos soins',
       'Livraison partout au Maroc',
       'Suivi en temps réel',
-      'Partenaires : DHL, FedEx, Tawssil',
+      'Partenaires : DHL, FedEx, LAST MILE EXPRESS',
     ],
   },
 ];
