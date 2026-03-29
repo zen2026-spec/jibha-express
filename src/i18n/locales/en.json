@@ -1,0 +1,146 @@
+{
+  "nav": {
+    "home": "Home",
+    "pricing": "Pricing",
+    "howItWorks": "How It Works",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "contact": "Contact",
+    "login": "Login",
+    "register": "Create Account",
+    "dashboard": "My Account",
+    "marketplaces": "Shops"
+  },
+  "hero": {
+    "badge": "Delivery Europe → Morocco",
+    "title": "Your address in Portugal,",
+    "titleHighlight": "Delivered to Morocco",
+    "subtitle": "Shop on any European e-commerce site. We receive, consolidate and ship your parcels directly to Morocco with customs clearance included.",
+    "cta": "Create my free address",
+    "ctaSecondary": "View pricing",
+    "stats": {
+      "countries": "Countries served",
+      "packages": "Parcels processed",
+      "clients": "Happy clients",
+      "days": "Average delay (days)"
+    }
+  },
+  "howItWorks": {
+    "title": "How does it work?",
+    "subtitle": "4 simple steps to receive your European purchases in Morocco",
+    "step1": { "title": "Create your account", "desc": "Free registration and instantly get your virtual address in Portugal" },
+    "step2": { "title": "Shop online", "desc": "Use your Portuguese address to deliver your purchases on any European site" },
+    "step3": { "title": "We consolidate", "desc": "We receive, check and group your parcels in our Lisbon warehouse" },
+    "step4": { "title": "Delivery to Morocco", "desc": "Your parcels are shipped, cleared through customs and delivered to your home in Morocco" }
+  },
+  "plans": {
+    "title": "Our Plans",
+    "subtitle": "Choose the plan that fits your needs",
+    "popular": "Most popular",
+    "standard": {
+      "name": "Standard Access",
+      "price": "Free",
+      "priceNote": "excl. shipping costs",
+      "features": ["Virtual address in Portugal", "Unlimited parcels", "Free storage 20 days", "Then €1.50 excl. VAT/parcel/day", "PayPal & card payment", "Real-time tracking", "Email notifications"],
+      "cta": "Start for free"
+    },
+    "premium": {
+      "name": "Premium",
+      "price": "€19.90",
+      "priceNote": "/month",
+      "features": ["Everything in Standard", "Credits for assisted services", "Assisted purchase in Europe", "Opening & photo verification", "Parcel consolidation", "Original invoice extraction", "Priority support", "Morocco duty & tax calculation"],
+      "cta": "Choose Premium"
+    },
+    "business": {
+      "name": "Business Premium",
+      "price": "€49.90",
+      "priceNote": "/month",
+      "features": ["Everything in Premium", "Unlimited volume", "Dedicated account", "Negotiated shipping rates", "Express customs clearance", "Monthly invoicing", "Dedicated manager", "API integration", "Detailed reports"],
+      "cta": "Contact sales"
+    }
+  },
+  "carriers": {
+    "title": "Express carriers to Morocco",
+    "subtitle": "Compare prices and delivery times in real time",
+    "from": "From Lisbon",
+    "to": "To all Moroccan cities",
+    "days": "business days"
+  },
+  "simulator": {
+    "title": "Cost Simulator",
+    "weight": "Weight (kg)",
+    "dimensions": "Dimensions (cm)",
+    "length": "Length",
+    "width": "Width",
+    "height": "Height",
+    "value": "Declared value (€)",
+    "carrier": "Carrier",
+    "calculate": "Calculate",
+    "result": "Cost estimate",
+    "shipping": "Shipping fee",
+    "customs": "Morocco duty & tax",
+    "handling": "Handling fee",
+    "total": "Estimated total",
+    "disclaimer": "* Indicative estimate. Final cost may vary based on exact content."
+  },
+  "address": {
+    "title": "Your virtual address in Portugal",
+    "subtitle": "Share this address when shopping online",
+    "company": "JibhaExpress Portugal Lda",
+    "street": "Rua da Alfandega, 10",
+    "city": "1100-016 Lisboa",
+    "country": "Portugal",
+    "phone": "+351 21 000 0000",
+    "email": "warehouse@jibha-express.com",
+    "clientId": "Your client ID",
+    "copy": "Copy address",
+    "copied": "Copied!"
+  },
+  "footer": {
+    "tagline": "Your gateway between Europe and Morocco",
+    "services": "Services",
+    "company": "Company",
+    "legal": "Legal",
+    "followUs": "Follow us",
+    "rights": "All rights reserved",
+    "terms": "Terms",
+    "privacy": "Privacy",
+    "cookies": "Cookies"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "phone": "Phone",
+    "city": "City",
+    "country": "Country",
+    "forgotPassword": "Forgot password?",
+    "noAccount": "No account yet?",
+    "haveAccount": "Already have an account?",
+    "loginBtn": "Log in",
+    "registerBtn": "Create my account",
+    "or": "or",
+    "agreeTerms": "I agree to the terms of service",
+    "welcomeBack": "Welcome back!",
+    "accountCreated": "Account created successfully!"
+  },
+  "dashboard": {
+    "welcome": "Welcome",
+    "myPackages": "My Parcels",
+    "inTransit": "In Transit",
+    "stored": "Stored",
+    "shipped": "Shipped",
+    "delivered": "Delivered",
+    "myAddress": "My Address",
+    "simulator": "Simulator",
+    "taxCalc": "Tax Calculator",
+    "payments": "Payments",
+    "notifications": "Notifications",
+    "profile": "My Profile",
+    "logout": "Logout"
+  }
+}

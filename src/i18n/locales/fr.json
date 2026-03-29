@@ -1,0 +1,224 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "pricing": "Tarifs",
+    "howItWorks": "Fonctionnement",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "contact": "Contact",
+    "login": "Connexion",
+    "register": "Créer un compte",
+    "dashboard": "Mon Espace",
+    "marketplaces": "Boutiques"
+  },
+  "hero": {
+    "badge": "Livraison Europe → Maroc",
+    "title": "Votre adresse en Portugal,",
+    "titleHighlight": "Livré au Maroc",
+    "subtitle": "Achetez sur tous les sites e-commerce européens. Nous réceptionnons, consolidons et expédions vos colis directement au Maroc avec dédouanement inclus.",
+    "cta": "Créer mon adresse gratuite",
+    "ctaSecondary": "Voir les tarifs",
+    "stats": {
+      "countries": "Pays desservis",
+      "packages": "Colis traités",
+      "clients": "Clients satisfaits",
+      "days": "Délai moyen (jours)"
+    }
+  },
+  "howItWorks": {
+    "title": "Comment ça fonctionne ?",
+    "subtitle": "4 étapes simples pour recevoir vos achats européens au Maroc",
+    "step1": {
+      "title": "Créez votre compte",
+      "desc": "Inscription gratuite et obtenez instantanément votre adresse virtuelle au Portugal"
+    },
+    "step2": {
+      "title": "Faites vos achats",
+      "desc": "Utilisez votre adresse portugaise pour livrer vos achats sur tous les sites européens"
+    },
+    "step3": {
+      "title": "Nous consolidons",
+      "desc": "Nous réceptionnons, vérifions et regroupons vos colis dans notre entrepôt à Lisbonne"
+    },
+    "step4": {
+      "title": "Livraison au Maroc",
+      "desc": "Vos colis sont expédiés, dédouanés et livrés à votre domicile au Maroc"
+    }
+  },
+  "plans": {
+    "title": "Nos offres",
+    "subtitle": "Choisissez le plan adapté à vos besoins",
+    "popular": "Plus populaire",
+    "standard": {
+      "name": "Accès Standard",
+      "price": "Gratuit",
+      "priceNote": "hors frais de transport",
+      "features": [
+        "Adresse virtuelle au Portugal",
+        "Colis illimités",
+        "Stockage gratuit 20 jours",
+        "Puis 1,50€ HT/colis/jour",
+        "Paiement PayPal & carte",
+        "Suivi en temps réel",
+        "Notifications par email"
+      ],
+      "cta": "Commencer gratuitement"
+    },
+    "premium": {
+      "name": "Premium",
+      "price": "19,90€",
+      "priceNote": "/mois",
+      "features": [
+        "Tout du plan Standard",
+        "Crédits pour services assistés",
+        "Achat assisté en Europe",
+        "Ouverture & vérification photos",
+        "Groupage de colis",
+        "Extraction de facture originale",
+        "Support prioritaire",
+        "Calcul droits & taxes Maroc"
+      ],
+      "cta": "Choisir Premium"
+    },
+    "business": {
+      "name": "Business Premium",
+      "price": "49,90€",
+      "priceNote": "/mois",
+      "features": [
+        "Tout du plan Premium",
+        "Volume illimité",
+        "Compte dédié",
+        "Tarifs transport négociés",
+        "Dédouanement express",
+        "Facturation mensuelle",
+        "Manager dédié",
+        "API d'intégration",
+        "Rapports détaillés"
+      ],
+      "cta": "Contacter les ventes"
+    }
+  },
+  "carriers": {
+    "title": "Transporteurs express vers le Maroc",
+    "subtitle": "Comparez les tarifs et délais en temps réel",
+    "from": "Depuis Lisbonne",
+    "to": "Vers toutes les villes du Maroc",
+    "days": "jours ouvrables"
+  },
+  "simulator": {
+    "title": "Simulateur de coût",
+    "weight": "Poids (kg)",
+    "dimensions": "Dimensions (cm)",
+    "length": "Longueur",
+    "width": "Largeur",
+    "height": "Hauteur",
+    "value": "Valeur déclarée (€)",
+    "carrier": "Transporteur",
+    "calculate": "Calculer",
+    "result": "Estimation du coût",
+    "shipping": "Frais de transport",
+    "customs": "Droits & taxes Maroc",
+    "handling": "Frais de traitement",
+    "total": "Total estimé",
+    "disclaimer": "* Estimation indicative. Le coût final peut varier selon le contenu exact."
+  },
+  "address": {
+    "title": "Votre adresse virtuelle au Portugal",
+    "subtitle": "Partagez cette adresse lors de vos achats en ligne",
+    "company": "JibhaExpress Portugal Lda",
+    "street": "Rua da Alfandega, 10",
+    "city": "1100-016 Lisboa",
+    "country": "Portugal",
+    "phone": "+351 21 000 0000",
+    "email": "warehouse@jibha-express.com",
+    "clientId": "Votre identifiant client",
+    "copy": "Copier l'adresse",
+    "copied": "Copié !"
+  },
+  "marketplaces": {
+    "title": "Boutiques & Marketplaces européennes",
+    "subtitle": "Achetez sur toutes ces boutiques et faites livrer à votre adresse portugaise",
+    "fashion": "Mode",
+    "electronics": "Électronique",
+    "beauty": "Beauté & Santé",
+    "home": "Maison",
+    "sports": "Sport",
+    "kids": "Enfants"
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "subtitle": "Tout ce que vous devez savoir sur notre service"
+  },
+  "contact": {
+    "title": "Nous contacter",
+    "subtitle": "Notre équipe est disponible pour vous aider",
+    "name": "Nom complet",
+    "email": "Email",
+    "subject": "Sujet",
+    "message": "Message",
+    "send": "Envoyer le message",
+    "success": "Message envoyé avec succès !",
+    "address": "Adresse",
+    "phone": "Téléphone",
+    "hours": "Horaires"
+  },
+  "footer": {
+    "tagline": "Votre passerelle entre l'Europe et le Maroc",
+    "services": "Services",
+    "company": "Entreprise",
+    "legal": "Légal",
+    "followUs": "Suivez-nous",
+    "rights": "Tous droits réservés",
+    "terms": "CGU",
+    "privacy": "Confidentialité",
+    "cookies": "Cookies"
+  },
+  "auth": {
+    "login": "Connexion",
+    "register": "Inscription",
+    "email": "Email",
+    "password": "Mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "phone": "Téléphone",
+    "city": "Ville",
+    "country": "Pays",
+    "forgotPassword": "Mot de passe oublié ?",
+    "noAccount": "Pas encore de compte ?",
+    "haveAccount": "Déjà un compte ?",
+    "loginBtn": "Se connecter",
+    "registerBtn": "Créer mon compte",
+    "or": "ou",
+    "agreeTerms": "J'accepte les conditions d'utilisation",
+    "welcomeBack": "Bon retour !",
+    "accountCreated": "Compte créé avec succès !"
+  },
+  "dashboard": {
+    "welcome": "Bienvenue",
+    "myPackages": "Mes colis",
+    "inTransit": "En transit",
+    "stored": "Stockés",
+    "shipped": "Expédiés",
+    "delivered": "Livrés",
+    "myAddress": "Mon adresse",
+    "simulator": "Simulateur",
+    "taxCalc": "Calcul taxes",
+    "payments": "Paiements",
+    "notifications": "Notifications",
+    "profile": "Mon profil",
+    "logout": "Déconnexion",
+    "newPackage": "Nouveau colis",
+    "trackPackage": "Suivre",
+    "viewPhotos": "Voir photos",
+    "requestShipment": "Demander l'envoi",
+    "status": {
+      "received": "Reçu",
+      "processing": "En traitement",
+      "stored": "Stocké",
+      "shipped": "Expédié",
+      "inCustoms": "En douane",
+      "delivered": "Livré"
+    }
+  }
+}
