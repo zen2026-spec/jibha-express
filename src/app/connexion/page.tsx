@@ -2,6 +2,8 @@
 
 import { useState, useCallback } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { signIn } from 'next-auth/react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Mail, Lock, Eye, EyeOff, ArrowRight, Package, ShieldCheck } from 'lucide-react';
@@ -73,6 +75,8 @@ interface FormErrors {
 
 // ─── Page component ───────────────────────────────────────────────────────────
 export default function ConnexionPage() {
+  const router = useRouter();
+
   const [formData, setFormData] = useState<FormData>({
     email: '',
     password: '',
@@ -100,11 +104,20 @@ export default function ConnexionPage() {
     e.preventDefault();
     if (!validate()) return;
     setIsSubmitting(true);
-    // Mock login delay
-    await new Promise((res) => setTimeout(res, 1000));
+
+    const result = await signIn('credentials', {
+      email: formData.email,
+      password: formData.password,
+      redirect: false,
+    });
+
     setIsSubmitting(false);
-    // In a real app: redirect or handle auth error
-    setErrors({ general: 'Identifiants incorrects. Veuillez réessayer.' });
+
+    if (result?.error) {
+      setErrors({ general: 'Identifiants incorrects ou compte inexistant.' });
+    } else {
+      router.push('/espace-client');
+    }
   };
 
   // ── Input change ───────────────────────────────────────────────────────────

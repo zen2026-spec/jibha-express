@@ -2,6 +2,8 @@
 
 import { useState, useCallback } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { signIn } from 'next-auth/react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import VirtualAddressCard from '@/components/VirtualAddressCard';
@@ -59,11 +61,6 @@ function getPasswordStrength(password: string): {
   return { score, label: 'Très fort', color: 'bg-green-500' };
 }
 
-// ─── Generate random 5-digit ID ───────────────────────────────────────────────
-function generateClientId(): string {
-  return String(Math.floor(10000 + Math.random() * 90000));
-}
-
 // ─── Benefits list (left panel) ───────────────────────────────────────────────
 const benefits = [
   {
@@ -113,6 +110,7 @@ interface FormErrors {
 
 // ─── Page component ───────────────────────────────────────────────────────────
 export default function InscriptionPage() {
+  const router = useRouter();
   const [formData, setFormData] = useState<FormData>({
     firstName: '',
     lastName: '',
@@ -129,8 +127,9 @@ export default function InscriptionPage() {
   const [showConfirm, setShowConfirm] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [registered, setRegistered] = useState(false);
-  const [clientId] = useState<string>(generateClientId());
+  const [clientId, setClientId] = useState<string>('');
   const [copiedAddress, setCopiedAddress] = useState(false);
+  const [serverError, setServerError] = useState<string | null>(null);
 
   const passwordStrength = getPasswordStrength(formData.password);
 
@@ -173,10 +172,44 @@ export default function InscriptionPage() {
     e.preventDefault();
     if (!validate()) return;
     setIsSubmitting(true);
-    // Mock registration delay
-    await new Promise((res) => setTimeout(res, 1200));
+    setServerError(null);
+
+    try {
+      const res = await fetch('/api/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+          city: formData.city,
+          password: formData.password,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        setServerError(data.error || 'Une erreur est survenue.');
+        setIsSubmitting(false);
+        return;
+      }
+
+      setClientId(data.clientId);
+      setRegistered(true);
+
+      // Auto sign-in after registration
+      await signIn('credentials', {
+        email: formData.email,
+        password: formData.password,
+        redirect: false,
+      });
+    } catch {
+      setServerError('Erreur de connexion. Veuillez réessayer.');
+    }
+
     setIsSubmitting(false);
-    setRegistered(true);
   };
 
   // ── Input change helpers ───────────────────────────────────────────────────
@@ -375,6 +408,15 @@ export default function InscriptionPage() {
                 </Link>
               </p>
             </div>
+
+            {serverError && (
+              <div className="mb-2 flex items-center gap-2.5 px-4 py-3 rounded-xl bg-red-50 border border-red-200 text-red-700 text-sm">
+                <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                </svg>
+                {serverError}
+              </div>
+            )}
 
             <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-4">
               {/* Prénom + Nom */}
