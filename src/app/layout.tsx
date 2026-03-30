@@ -4,6 +4,9 @@ import Providers from "./providers";
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
 
+// Prevent Vercel CDN from caching this page — locale is cookie-dependent
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: "JibhaExpress - Réexpédition Europe → Maroc | جيبها إكسبريس",
   description: "Service de réexpédition de colis depuis l'Europe (Portugal) vers le Maroc. Adresse virtuelle gratuite au Portugal. Livraison express DHL, FedEx, UPS, LAST MILE EXPRESS.",
