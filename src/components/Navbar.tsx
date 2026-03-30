@@ -3,16 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { Menu, X, ChevronDown, Package2 } from 'lucide-react';
-
-const navLinks = [
-  { label: 'Accueil', href: '/' },
-  { label: 'Tarifs', href: '/tarifs' },
-  { label: 'Fonctionnement', href: '/fonctionnement' },
-  { label: 'FAQ', href: '/faq' },
-  { label: 'Blog', href: '/blog' },
-  { label: 'Contact', href: '/contact' },
-  { label: 'Boutiques', href: '/boutiques' },
-];
+import { useTranslations } from 'next-intl';
 
 const languages = [
   { code: 'fr', label: 'FR', flag: '🇫🇷', name: 'Français' },
@@ -27,11 +18,22 @@ function getLocaleFromCookie(): string {
 }
 
 export default function Navbar() {
+  const t = useTranslations('nav');
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const [currentLang, setCurrentLang] = useState('fr');
   const langRef = useRef<HTMLDivElement>(null);
+
+  const navLinks = [
+    { label: t('home'), href: '/' },
+    { label: t('pricing'), href: '/tarifs' },
+    { label: t('howItWorks'), href: '/fonctionnement' },
+    { label: t('faq'), href: '/faq' },
+    { label: t('blog'), href: '/blog' },
+    { label: t('contact'), href: '/contact' },
+    { label: t('marketplaces'), href: '/boutiques' },
+  ];
 
   useEffect(() => {
     setCurrentLang(getLocaleFromCookie());
@@ -160,14 +162,14 @@ export default function Navbar() {
                   : 'border-white/40 text-white hover:bg-white/20 bg-transparent'
               }`}
             >
-              Connexion
+              {t('login')}
             </Link>
             <Link
               href="/inscription"
               className="px-4 py-2 rounded-lg text-sm font-semibold text-white shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
               style={{ background: 'linear-gradient(135deg, #1a56db 0%, #1e40af 100%)' }}
             >
-              S&apos;inscrire
+              {t('register')}
             </Link>
           </div>
 
@@ -240,7 +242,7 @@ export default function Navbar() {
               onClick={() => setMobileOpen(false)}
               className="w-full text-center px-4 py-3 rounded-xl text-sm font-medium text-gray-700 border border-gray-200 hover:border-blue-400 hover:text-blue-700 transition-colors duration-150"
             >
-              Connexion
+              {t('login')}
             </Link>
             <Link
               href="/inscription"
@@ -248,7 +250,7 @@ export default function Navbar() {
               className="w-full text-center px-4 py-3 rounded-xl text-sm font-semibold text-white shadow-md transition-all duration-150 hover:shadow-lg"
               style={{ background: 'linear-gradient(135deg, #1a56db 0%, #1e40af 100%)' }}
             >
-              S&apos;inscrire
+              {t('register')}
             </Link>
           </div>
         </div>

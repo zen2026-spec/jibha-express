@@ -7,7 +7,7 @@
     "blog": "Blog",
     "contact": "Contact",
     "login": "Login",
-    "register": "Create Account",
+    "register": "Sign Up",
     "dashboard": "My Account",
     "marketplaces": "Shops"
   },
@@ -15,73 +15,154 @@
     "badge": "Delivery Europe → Morocco",
     "title": "Your address in Portugal,",
     "titleHighlight": "Delivered to Morocco",
-    "subtitle": "Shop on any European e-commerce site. We receive, consolidate and ship your parcels directly to Morocco with customs clearance included.",
+    "subtitle": "Get a Portuguese postal address in seconds. Shop on any European site and receive your parcels at home in Morocco — fast and secure.",
     "cta": "Create my free address",
     "ctaSecondary": "View pricing",
+    "trust": {
+      "shipping": "Insured delivery",
+      "free": "Free registration",
+      "rating": "4.9 / 5 stars"
+    },
     "stats": {
       "countries": "Countries served",
       "packages": "Parcels processed",
-      "clients": "Happy clients",
-      "days": "Average delay (days)"
+      "clients": "Active clients",
+      "days": "Delivery time"
     }
   },
   "howItWorks": {
-    "title": "How does it work?",
-    "subtitle": "4 simple steps to receive your European purchases in Morocco",
-    "step1": { "title": "Create your account", "desc": "Free registration and instantly get your virtual address in Portugal" },
-    "step2": { "title": "Shop online", "desc": "Use your Portuguese address to deliver your purchases on any European site" },
-    "step3": { "title": "We consolidate", "desc": "We receive, check and group your parcels in our Lisbon warehouse" },
-    "step4": { "title": "Delivery to Morocco", "desc": "Your parcels are shipped, cleared through customs and delivered to your home in Morocco" }
+    "badge": "Simple & fast",
+    "title": "How does it",
+    "titleHighlight": "work?",
+    "subtitle": "From creating your account to delivery at your door — four simple steps.",
+    "step1": {
+      "title": "Create your account",
+      "desc": "Free registration in 2 minutes. Instantly get your virtual address in Portugal, ready to use."
+    },
+    "step2": {
+      "title": "Shop online",
+      "desc": "Use your Portuguese address on any European e-commerce site: Amazon, Zara, IKEA, ASOS and many more."
+    },
+    "step3": {
+      "title": "We consolidate",
+      "desc": "We receive, check and group all your parcels in our Lisbon warehouse before shipping."
+    },
+    "step4": {
+      "title": "Delivery to Morocco",
+      "desc": "Your parcels are shipped, cleared through customs and delivered to your door anywhere in Morocco in 5–7 business days."
+    },
+    "ctaNote": "Ready to start? Create your account for free in 2 minutes.",
+    "ctaBtn": "Create my free account"
   },
   "plans": {
-    "title": "Our Plans",
-    "subtitle": "Choose the plan that fits your needs",
-    "popular": "Most popular",
+    "badge": "Our Plans",
+    "title": "Plans tailored to",
+    "titleHighlight": "every need",
+    "subtitle": "Start for free and upgrade as your needs grow. No commitment, cancel anytime.",
+    "popular": "POPULAR",
     "standard": {
-      "name": "Standard Access",
-      "price": "Free",
-      "priceNote": "excl. shipping costs",
-      "features": ["Virtual address in Portugal", "Unlimited parcels", "Free storage 20 days", "Then €1.50 excl. VAT/parcel/day", "PayPal & card payment", "Real-time tracking", "Email notifications"],
-      "cta": "Start for free"
+      "name": "Standard",
+      "price": null,
+      "priceLabel": "Free",
+      "priceSubtitle": "Free forever",
+      "description": "Ideal for getting started with European shopping.",
+      "features": [
+        "Virtual address in Portugal",
+        "Unlimited parcels",
+        "Free storage 20 days",
+        "Then €1.50 excl. VAT/parcel/day",
+        "PayPal & card payment",
+        "Real-time tracking",
+        "Email notifications",
+        "Assisted purchase in Europe",
+        "Opening & parcel photos",
+        "Parcel consolidation"
+      ],
+      "cta": "Start for free",
+      "noCard": "No credit card required"
     },
     "premium": {
       "name": "Premium",
       "price": "€19.90",
-      "priceNote": "/month",
-      "features": ["Everything in Standard", "Credits for assisted services", "Assisted purchase in Europe", "Opening & photo verification", "Parcel consolidation", "Original invoice extraction", "Priority support", "Morocco duty & tax calculation"],
-      "cta": "Choose Premium"
+      "priceSubtitle": "per month, excl. VAT",
+      "description": "For regular shoppers who want the best service.",
+      "features": [
+        "Everything in Standard",
+        "Credits for assisted services",
+        "Assisted purchase in Europe",
+        "Opening & photo verification",
+        "Parcel consolidation (grouping)",
+        "Original invoice extraction",
+        "Priority support",
+        "Morocco duty & tax calculation",
+        "Dedicated account manager",
+        "Negotiated shipping rates"
+      ],
+      "cta": "Choose Premium",
+      "noCommitment": "No commitment · Cancel anytime"
     },
     "business": {
       "name": "Business Premium",
       "price": "€49.90",
-      "priceNote": "/month",
-      "features": ["Everything in Premium", "Unlimited volume", "Dedicated account", "Negotiated shipping rates", "Express customs clearance", "Monthly invoicing", "Dedicated manager", "API integration", "Detailed reports"],
-      "cta": "Contact sales"
-    }
+      "priceSubtitle": "per month, excl. VAT",
+      "description": "For businesses and high-volume sellers.",
+      "features": [
+        "Everything in Premium",
+        "Unlimited volume",
+        "Dedicated account manager",
+        "Negotiated shipping rates",
+        "Express customs clearance",
+        "Monthly invoicing",
+        "API integration",
+        "Detailed reports",
+        "Guaranteed SLA",
+        "Training & onboarding"
+      ],
+      "cta": "Contact sales",
+      "quote": "Custom quote available"
+    },
+    "noTax": "All prices are in euros, excluding taxes.",
+    "faqCta": "Questions? Check our FAQ"
   },
   "carriers": {
-    "title": "Express carriers to Morocco",
-    "subtitle": "Compare prices and delivery times in real time",
-    "from": "From Lisbon",
-    "to": "To all Moroccan cities",
-    "days": "business days"
+    "badge": "Our Carriers",
+    "title": "Fast delivery",
+    "titleHighlight": "Lisbon → Morocco",
+    "subtitle": "We work with the best international carriers to guarantee reliability and speed.",
+    "from": "Lisbon, Portugal",
+    "to": "Morocco",
+    "days": "business days",
+    "from_label": "From",
+    "per_kg": "/ 1 kg",
+    "calculate": "Calculate",
+    "guarantees": {
+      "transit": "Guaranteed transit times",
+      "transitDesc": "Indicated times are in business days from parcel pick-up.",
+      "tracking": "Real-time tracking",
+      "trackingDesc": "Receive a tracking number upon shipping and follow your parcel at every step.",
+      "insurance": "Insurance included",
+      "insuranceDesc": "All shipments are insured against loss and damage up to the declared value."
+    }
   },
   "simulator": {
-    "title": "Cost Simulator",
+    "title": "Price Simulator",
+    "subtitle": "Estimate shipping cost from Lisbon to Morocco",
     "weight": "Weight (kg)",
-    "dimensions": "Dimensions (cm)",
-    "length": "Length",
-    "width": "Width",
-    "height": "Height",
+    "dimensions": "Dimensions (cm) — optional",
+    "volumetricNote": "Volumetric weight will be used if greater than actual weight.",
     "value": "Declared value (€)",
+    "customsNote": "Used to estimate Moroccan customs duties (~2.5%).",
     "carrier": "Carrier",
-    "calculate": "Calculate",
-    "result": "Cost estimate",
-    "shipping": "Shipping fee",
-    "customs": "Morocco duty & tax",
-    "handling": "Handling fee",
+    "calculate": "Calculate cost",
+    "calculating": "Calculating…",
+    "result": "Estimate for",
+    "transport": "Transport",
+    "handling": "Handling",
+    "customs": "Morocco customs estimate",
     "total": "Estimated total",
-    "disclaimer": "* Indicative estimate. Final cost may vary based on exact content."
+    "disclaimer": "Indicative estimate. Final amount may vary based on actual weight and customs decisions.",
+    "empty": "Calculation results",
+    "emptyDesc": "Fill in your parcel details and click \"Calculate cost\" to get an estimate."
   },
   "address": {
     "title": "Your virtual address in Portugal",
@@ -96,13 +177,47 @@
     "copy": "Copy address",
     "copied": "Copied!"
   },
+  "marketplaces": {
+    "title": "European shops & marketplaces",
+    "subtitle": "Shop at any of these stores and ship to your Portuguese address",
+    "fashion": "Fashion",
+    "electronics": "Electronics",
+    "beauty": "Beauty & Health",
+    "home": "Home",
+    "sports": "Sports",
+    "kids": "Kids"
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "subtitle": "Everything you need to know about our service"
+  },
+  "contact": {
+    "title": "Contact us",
+    "subtitle": "Our team is available to help you",
+    "name": "Full name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send message",
+    "success": "Message sent successfully!",
+    "address": "Address",
+    "phone": "Phone",
+    "hours": "Hours"
+  },
   "footer": {
-    "tagline": "Your gateway between Europe and Morocco",
+    "tagline": "Your gateway between Europe and Morocco.\nReliable, fast and affordable deliveries from Portugal to your door.",
     "services": "Services",
     "company": "Company",
     "legal": "Legal",
+    "contactUs": "Contact us",
+    "newsletter": "Newsletter",
+    "newsletterDesc": "Receive our offers and news directly in your inbox.",
+    "subscribe": "Subscribe",
+    "subscribed": "Thank you for subscribing!",
     "followUs": "Follow us",
     "rights": "All rights reserved",
+    "madeIn": "Made with",
+    "madeInCountry": "in Portugal",
     "terms": "Terms",
     "privacy": "Privacy",
     "cookies": "Cookies"
@@ -141,6 +256,14 @@
     "payments": "Payments",
     "notifications": "Notifications",
     "profile": "My Profile",
-    "logout": "Logout"
+    "logout": "Logout",
+    "status": {
+      "received": "Received",
+      "processing": "Processing",
+      "stored": "Stored",
+      "shipped": "Shipped",
+      "inCustoms": "In Customs",
+      "delivered": "Delivered"
+    }
   }
 }

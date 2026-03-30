@@ -7,7 +7,7 @@
     "blog": "Blog",
     "contact": "Contact",
     "login": "Connexion",
-    "register": "Créer un compte",
+    "register": "S'inscrire",
     "dashboard": "Mon Espace",
     "marketplaces": "Boutiques"
   },
@@ -15,112 +15,154 @@
     "badge": "Livraison Europe → Maroc",
     "title": "Votre adresse en Portugal,",
     "titleHighlight": "Livré au Maroc",
-    "subtitle": "Achetez sur tous les sites e-commerce européens. Nous réceptionnons, consolidons et expédions vos colis directement au Maroc avec dédouanement inclus.",
+    "subtitle": "Obtenez une adresse postale portugaise en quelques secondes. Commandez sur tous les sites européens et recevez vos colis directement à domicile au Maroc — rapidement, en toute sécurité.",
     "cta": "Créer mon adresse gratuite",
     "ctaSecondary": "Voir les tarifs",
+    "trust": {
+      "shipping": "Livraison assurée",
+      "free": "Inscription gratuite",
+      "rating": "4.9 / 5 étoiles"
+    },
     "stats": {
       "countries": "Pays desservis",
       "packages": "Colis traités",
-      "clients": "Clients satisfaits",
-      "days": "Délai moyen (jours)"
+      "clients": "Clients actifs",
+      "days": "Délai livraison"
     }
   },
   "howItWorks": {
-    "title": "Comment ça fonctionne ?",
-    "subtitle": "4 étapes simples pour recevoir vos achats européens au Maroc",
+    "badge": "Simple & rapide",
+    "title": "Comment ça",
+    "titleHighlight": "fonctionne ?",
+    "subtitle": "De la création de votre compte à la livraison chez vous — quatre étapes simples suffisent.",
     "step1": {
       "title": "Créez votre compte",
-      "desc": "Inscription gratuite et obtenez instantanément votre adresse virtuelle au Portugal"
+      "desc": "Inscription gratuite en 2 minutes. Obtenez instantanément votre adresse virtuelle au Portugal, prête à l'emploi."
     },
     "step2": {
       "title": "Faites vos achats",
-      "desc": "Utilisez votre adresse portugaise pour livrer vos achats sur tous les sites européens"
+      "desc": "Utilisez votre adresse portugaise sur tous les sites e-commerce européens : Amazon, Zara, IKEA, ASOS et bien d'autres."
     },
     "step3": {
       "title": "Nous consolidons",
-      "desc": "Nous réceptionnons, vérifions et regroupons vos colis dans notre entrepôt à Lisbonne"
+      "desc": "Nous réceptionnons, vérifions et regroupons tous vos colis dans notre entrepôt à Lisbonne avant l'expédition."
     },
     "step4": {
       "title": "Livraison au Maroc",
-      "desc": "Vos colis sont expédiés, dédouanés et livrés à votre domicile au Maroc"
-    }
+      "desc": "Vos colis sont expédiés, dédouanés et livrés à domicile partout au Maroc en 5 à 7 jours ouvrés."
+    },
+    "ctaNote": "Prêt à commencer ? Créez votre compte gratuitement en 2 minutes.",
+    "ctaBtn": "Créer mon compte gratuitement"
   },
   "plans": {
-    "title": "Nos offres",
-    "subtitle": "Choisissez le plan adapté à vos besoins",
-    "popular": "Plus populaire",
+    "badge": "Nos Offres",
+    "title": "Des plans adaptés à",
+    "titleHighlight": "chaque besoin",
+    "subtitle": "Commencez gratuitement et passez à un plan supérieur au fur et à mesure de vos besoins. Pas d'engagement, résiliez à tout moment.",
+    "popular": "POPULAIRE",
     "standard": {
-      "name": "Accès Standard",
-      "price": "Gratuit",
-      "priceNote": "hors frais de transport",
+      "name": "Standard",
+      "price": null,
+      "priceLabel": "Gratuit",
+      "priceSubtitle": "Gratuit pour toujours",
+      "description": "Idéal pour commencer vos achats en Europe.",
       "features": [
         "Adresse virtuelle au Portugal",
         "Colis illimités",
         "Stockage gratuit 20 jours",
-        "Puis 1,50€ HT/colis/jour",
-        "Paiement PayPal & carte",
+        "Au-delà : €1,50 HT/colis/jour",
+        "Paiement PayPal & carte bancaire",
         "Suivi en temps réel",
-        "Notifications par email"
+        "Notifications par e-mail",
+        "Achat assisté en Europe",
+        "Ouverture & photos colis",
+        "Consolidation de colis"
       ],
-      "cta": "Commencer gratuitement"
+      "cta": "Commencer gratuitement",
+      "noCard": "Aucune carte requise"
     },
     "premium": {
       "name": "Premium",
-      "price": "19,90€",
-      "priceNote": "/mois",
+      "price": "€19,90",
+      "priceSubtitle": "par mois, HT",
+      "description": "Pour les acheteurs réguliers qui veulent le meilleur service.",
       "features": [
-        "Tout du plan Standard",
+        "Tout ce qui est inclus dans Standard",
         "Crédits pour services assistés",
         "Achat assisté en Europe",
-        "Ouverture & vérification photos",
-        "Groupage de colis",
+        "Ouverture & vérification photos colis",
+        "Consolidation de colis (groupage)",
         "Extraction de facture originale",
         "Support prioritaire",
-        "Calcul droits & taxes Maroc"
+        "Calcul droits & taxes Maroc",
+        "Responsable de compte dédié",
+        "Tarifs de livraison négociés"
       ],
-      "cta": "Choisir Premium"
+      "cta": "Choisir Premium",
+      "noCommitment": "Sans engagement · Résiliez à tout moment"
     },
     "business": {
       "name": "Business Premium",
-      "price": "49,90€",
-      "priceNote": "/mois",
+      "price": "€49,90",
+      "priceSubtitle": "par mois, HT",
+      "description": "Pour les entreprises et les vendeurs à volume élevé.",
       "features": [
-        "Tout du plan Premium",
+        "Tout ce qui est inclus dans Premium",
         "Volume illimité",
-        "Compte dédié",
-        "Tarifs transport négociés",
+        "Responsable de compte dédié",
+        "Tarifs de livraison négociés",
         "Dédouanement express",
         "Facturation mensuelle",
-        "Manager dédié",
-        "API d'intégration",
-        "Rapports détaillés"
+        "Intégration API",
+        "Rapports détaillés",
+        "SLA garanti",
+        "Formation & onboarding"
       ],
-      "cta": "Contacter les ventes"
-    }
+      "cta": "Contacter les ventes",
+      "quote": "Devis personnalisé disponible"
+    },
+    "noTax": "Tous les prix sont en euros, hors taxes.",
+    "faqCta": "Des questions ? Consultez notre FAQ"
   },
   "carriers": {
-    "title": "Transporteurs express vers le Maroc",
-    "subtitle": "Comparez les tarifs et délais en temps réel",
-    "from": "Depuis Lisbonne",
-    "to": "Vers toutes les villes du Maroc",
-    "days": "jours ouvrables"
+    "badge": "Nos Transporteurs",
+    "title": "Livraison rapide",
+    "titleHighlight": "Lisbonne → Maroc",
+    "subtitle": "Nous travaillons avec les meilleurs transporteurs internationaux pour vous garantir fiabilité et rapidité.",
+    "from": "Lisbonne, Portugal",
+    "to": "Maroc",
+    "days": "jours ouvrables",
+    "from_label": "À partir de",
+    "per_kg": "/ 1 kg",
+    "calculate": "Calculer",
+    "guarantees": {
+      "transit": "Délais garantis",
+      "transitDesc": "Les délais indiqués sont en jours ouvrables à partir de la prise en charge du colis.",
+      "tracking": "Suivi en temps réel",
+      "trackingDesc": "Recevez un numéro de suivi dès l'expédition et suivez votre colis à chaque étape.",
+      "insurance": "Assurance incluse",
+      "insuranceDesc": "Tous les envois sont assurés contre la perte et les dommages jusqu'à la valeur déclarée."
+    }
   },
   "simulator": {
-    "title": "Simulateur de coût",
+    "title": "Simulateur de prix",
+    "subtitle": "Estimez le coût de livraison de Lisbonne vers le Maroc",
     "weight": "Poids (kg)",
-    "dimensions": "Dimensions (cm)",
-    "length": "Longueur",
-    "width": "Largeur",
-    "height": "Hauteur",
+    "dimensions": "Dimensions (cm) — optionnel",
+    "volumetricNote": "Le poids volumétrique sera pris en compte si supérieur au poids réel.",
     "value": "Valeur déclarée (€)",
+    "customsNote": "Utilisé pour l'estimation des droits de douane marocains (~2,5%).",
     "carrier": "Transporteur",
-    "calculate": "Calculer",
-    "result": "Estimation du coût",
-    "shipping": "Frais de transport",
-    "customs": "Droits & taxes Maroc",
-    "handling": "Frais de traitement",
+    "calculate": "Calculer le coût",
+    "calculating": "Calcul en cours…",
+    "result": "Estimation pour",
+    "transport": "Transport",
+    "handling": "Manutention",
+    "customs": "Estimation douane Maroc",
     "total": "Total estimé",
-    "disclaimer": "* Estimation indicative. Le coût final peut varier selon le contenu exact."
+    "disclaimer": "Estimation indicative. Le montant final peut varier selon le poids réel et les décisions douanières.",
+    "empty": "Résultats du calcul",
+    "emptyDesc": "Renseignez les informations de votre colis et cliquez sur « Calculer le coût » pour obtenir une estimation."
   },
   "address": {
     "title": "Votre adresse virtuelle au Portugal",
@@ -163,12 +205,19 @@
     "hours": "Horaires"
   },
   "footer": {
-    "tagline": "Votre passerelle entre l'Europe et le Maroc",
+    "tagline": "Votre passerelle entre l'Europe et le Maroc.\nLivraisons fiables, rapides et abordables depuis le Portugal jusqu'à votre porte.",
     "services": "Services",
     "company": "Entreprise",
     "legal": "Légal",
+    "contactUs": "Nous contacter",
+    "newsletter": "Newsletter",
+    "newsletterDesc": "Recevez nos offres et actualités directement dans votre boîte mail.",
+    "subscribe": "S'abonner",
+    "subscribed": "Merci pour votre inscription !",
     "followUs": "Suivez-nous",
     "rights": "Tous droits réservés",
+    "madeIn": "Fait avec",
+    "madeInCountry": "au Portugal",
     "terms": "CGU",
     "privacy": "Confidentialité",
     "cookies": "Cookies"

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 import {
   Package,
   Truck,
@@ -50,13 +51,6 @@ const TRACKING_CARDS = [
     eta: '5 jours',
     icon: Truck,
   },
-]
-
-const STATS = [
-  { value: '50+', label: 'Pays desservis' },
-  { value: '10 000+', label: 'Colis traités' },
-  { value: '2 500+', label: 'Clients actifs' },
-  { value: '5–7 Jours', label: 'Délai livraison' },
 ]
 
 function TrackingCard({
@@ -116,7 +110,21 @@ function TrackingCard({
 }
 
 export default function HeroSection() {
+  const t = useTranslations('hero')
   const [activeCard, setActiveCard] = useState(0)
+
+  const STATS = [
+    { value: '50+', label: t('stats.countries') },
+    { value: '10 000+', label: t('stats.packages') },
+    { value: '2 500+', label: t('stats.clients') },
+    { value: '5–7 Jours', label: t('stats.days') },
+  ]
+
+  const TRUST = [
+    { icon: Shield, label: t('trust.shipping') },
+    { icon: CheckCircle, label: t('trust.free') },
+    { icon: Star, label: t('trust.rating') },
+  ]
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -131,26 +139,16 @@ export default function HeroSection() {
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div
           className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full opacity-20"
-          style={{
-            background:
-              'radial-gradient(circle, #3b82f6 0%, transparent 70%)',
-          }}
+          style={{ background: 'radial-gradient(circle, #3b82f6 0%, transparent 70%)' }}
         />
         <div
           className="absolute -bottom-32 -left-32 w-[400px] h-[400px] rounded-full opacity-15"
-          style={{
-            background:
-              'radial-gradient(circle, #1d4ed8 0%, transparent 70%)',
-          }}
+          style={{ background: 'radial-gradient(circle, #1d4ed8 0%, transparent 70%)' }}
         />
         <div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full opacity-5"
-          style={{
-            background:
-              'radial-gradient(circle, #60a5fa 0%, transparent 60%)',
-          }}
+          style={{ background: 'radial-gradient(circle, #60a5fa 0%, transparent 60%)' }}
         />
-        {/* Grid overlay */}
         <div
           className="absolute inset-0 opacity-5"
           style={{
@@ -176,24 +174,19 @@ export default function HeroSection() {
 
           {/* Headline */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-6 animate-slide-up">
-            <span className="text-white">Votre adresse en Portugal,</span>
+            <span className="text-white">{t('title')}</span>
             <br />
             <span
               className="bg-clip-text text-transparent"
-              style={{
-                backgroundImage:
-                  'linear-gradient(90deg, #fbbf24 0%, #f97316 50%, #fb923c 100%)',
-              }}
+              style={{ backgroundImage: 'linear-gradient(90deg, #fbbf24 0%, #f97316 50%, #fb923c 100%)' }}
             >
-              Livré au Maroc
+              {t('titleHighlight')}
             </span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-white/70 text-lg sm:text-xl leading-relaxed mb-8 animate-fade-in">
-            Obtenez une adresse postale portugaise en quelques secondes.
-            Commandez sur tous les sites européens et recevez vos colis
-            directement à domicile au Maroc — rapidement, en toute sécurité.
+            {t('subtitle')}
           </p>
 
           {/* CTA buttons */}
@@ -203,28 +196,21 @@ export default function HeroSection() {
               className="group inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-blue-500 hover:bg-blue-400 text-white font-semibold text-base transition-all duration-200 hover:shadow-[0_8px_30px_rgba(59,130,246,0.5)] hover:-translate-y-0.5"
             >
               <Globe className="w-5 h-5" />
-              Créer mon adresse gratuite
+              {t('cta')}
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
             </Link>
             <Link
               href="/tarifs"
               className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl border-2 border-white/30 text-white font-semibold text-base transition-all duration-200 hover:bg-white/10 hover:border-white/50 backdrop-blur-sm"
             >
-              Voir les tarifs
+              {t('ctaSecondary')}
             </Link>
           </div>
 
           {/* Trust badges */}
           <div className="flex flex-wrap items-center gap-5 justify-center lg:justify-start">
-            {[
-              { icon: Shield, label: 'Livraison assurée' },
-              { icon: CheckCircle, label: 'Inscription gratuite' },
-              { icon: Star, label: '4.9 / 5 étoiles' },
-            ].map(({ icon: Icon, label }) => (
-              <div
-                key={label}
-                className="flex items-center gap-1.5 text-white/60 text-sm"
-              >
+            {TRUST.map(({ icon: Icon, label }) => (
+              <div key={label} className="flex items-center gap-1.5 text-white/60 text-sm">
                 <Icon className="w-4 h-4 text-blue-300" />
                 <span>{label}</span>
               </div>
@@ -238,9 +224,7 @@ export default function HeroSection() {
           <div className="glass rounded-2xl px-6 py-4 flex items-center gap-4 mb-6 shadow-xl">
             <div className="flex flex-col items-center gap-1">
               <span className="text-3xl">🇵🇹</span>
-              <span className="text-white/60 text-xs font-medium">
-                Lisbonne
-              </span>
+              <span className="text-white/60 text-xs font-medium">Lisbonne</span>
             </div>
             <div className="flex-1 flex flex-col items-center gap-1">
               <div className="relative w-24 h-0.5 bg-white/20">
@@ -248,9 +232,7 @@ export default function HeroSection() {
                   className="absolute inset-0 bg-gradient-to-r from-blue-400 to-cyan-300 rounded-full"
                   style={{ animation: 'slide-up 2s ease-in-out infinite' }}
                 />
-                <Plane
-                  className="absolute -top-3 left-1/2 -translate-x-1/2 w-5 h-5 text-cyan-300 animate-float"
-                />
+                <Plane className="absolute -top-3 left-1/2 -translate-x-1/2 w-5 h-5 text-cyan-300 animate-float" />
               </div>
               <span className="text-white/40 text-xs">vol direct</span>
             </div>
@@ -277,10 +259,7 @@ export default function HeroSection() {
                   }}
                   onClick={() => setActiveCard(idx)}
                 >
-                  <TrackingCard
-                    card={card}
-                    delay={`${idx * 0.5}s`}
-                  />
+                  <TrackingCard card={card} delay={`${idx * 0.5}s`} />
                 </div>
               )
             })}
@@ -293,9 +272,7 @@ export default function HeroSection() {
                 key={idx}
                 onClick={() => setActiveCard(idx)}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  idx === activeCard
-                    ? 'bg-blue-400 w-5'
-                    : 'bg-white/30 hover:bg-white/50'
+                  idx === activeCard ? 'bg-blue-400 w-5' : 'bg-white/30 hover:bg-white/50'
                 }`}
                 aria-label={`Voir colis ${idx + 1}`}
               />
@@ -309,16 +286,9 @@ export default function HeroSection() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {STATS.map((stat, idx) => (
-              <div
-                key={idx}
-                className="flex flex-col items-center text-center"
-              >
-                <span className="text-2xl sm:text-3xl font-extrabold text-white">
-                  {stat.value}
-                </span>
-                <span className="text-white/50 text-sm mt-0.5">
-                  {stat.label}
-                </span>
+              <div key={idx} className="flex flex-col items-center text-center">
+                <span className="text-2xl sm:text-3xl font-extrabold text-white">{stat.value}</span>
+                <span className="text-white/50 text-sm mt-0.5">{stat.label}</span>
               </div>
             ))}
           </div>
