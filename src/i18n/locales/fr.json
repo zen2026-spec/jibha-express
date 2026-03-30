@@ -164,6 +164,19 @@
     "empty": "Résultats du calcul",
     "emptyDesc": "Renseignez les informations de votre colis et cliquez sur « Calculer le coût » pour obtenir une estimation."
   },
+  "customs": {
+    "badge": "Moteur IA Douane Maroc",
+    "title": "Estimez vos",
+    "titleHighlight": "droits & taxes",
+    "subtitle": "Entrez le descriptif de votre article (en français, anglais ou arabe) et la valeur déclarée — notre moteur AI identifie le code HS marocain et calcule DI, TVA et TPI.",
+    "descLabel": "Descriptif de l'article",
+    "descPlaceholder": "ex: iPhone 15 Pro, رداء نسائي, Nike Air Max...",
+    "descHint": "Français, anglais ou arabe acceptés",
+    "valueLabel": "Valeur CIF (€)",
+    "calculate": "Calculer les droits",
+    "calculating": "Recherche en cours…",
+    "disclaimer": "Estimation indicative basée sur la nomenclature tarifaire marocaine en vigueur. Les droits réels peuvent varier selon l'origine, les accords commerciaux (ALE Maroc-UE) et la décision du bureau de douane. Taux de change utilisé : 1 € = 11 MAD."
+  },
   "address": {
     "title": "Votre adresse virtuelle au Portugal",
     "subtitle": "Partagez cette adresse lors de vos achats en ligne",

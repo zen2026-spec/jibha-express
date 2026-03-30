@@ -2,6 +2,7 @@ import Navbar from '@/components/Navbar'
 import HeroSection from '@/components/HeroSection'
 import HowItWorks from '@/components/HowItWorks'
 import CarriersSection from '@/components/CarriersSection'
+import CustomsCalculator from '@/components/CustomsCalculator'
 import PricingPlans from '@/components/PricingPlans'
 import MarketplacesSection from '@/components/MarketplacesSection'
 import TestimonialsSection from '@/components/TestimonialsSection'
@@ -183,6 +184,11 @@ export default function HomePage() {
         {/* Carriers & price simulator */}
         <section id="transporteurs" aria-label="Nos transporteurs et simulateur de prix">
           <CarriersSection />
+        </section>
+
+        {/* Customs duty AI calculator */}
+        <section id="droits-douane" aria-label="Calculateur de droits de douane Maroc">
+          <CustomsCalculator />
         </section>
 
         {/* Pricing plans */}

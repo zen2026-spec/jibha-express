@@ -1,10 +1,25 @@
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
+  previewFeatures = ["postgresqlExtensions"]
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider   = "postgresql"
+  url        = env("DATABASE_URL")
+  extensions = [vector]
+}
+
+// Moroccan HS code tariff — 13 135 entries, used by AI customs estimator
+model CustomsRate {
+  id          Int    @id @default(autoincrement())
+  hsCode      String @unique
+  description String
+  unit        String?
+  diRate      Float  // Import duty rate %
+  // embedding stored as native vector(384) — managed via raw SQL
+  // column added by migration, not tracked by Prisma ORM
+
+  @@map("customs_rates")
 }
 
 enum Role {
