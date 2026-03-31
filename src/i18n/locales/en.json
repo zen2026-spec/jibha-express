@@ -173,6 +173,10 @@
     "descPlaceholder": "e.g. iPhone 15 Pro, Nike Air Max, women's dress...",
     "descHint": "French, English or Arabic accepted",
     "valueLabel": "CIF Value (€)",
+    "originLabel": "Goods origin",
+    "originOther": "Other country",
+    "originEU": "European Union",
+    "originEUHint": "Morocco-EU FTA: import duty (DI) = 0%. VAT and parafiscal tax still apply.",
     "calculate": "Calculate duties",
     "calculating": "Searching…",
     "disclaimer": "Indicative estimate based on the Moroccan tariff nomenclature. Actual duties may vary depending on origin, trade agreements (Morocco-EU FTA) and customs office decision. Exchange rate used: 1 € = 11 MAD."

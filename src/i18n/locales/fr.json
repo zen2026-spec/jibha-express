@@ -173,6 +173,10 @@
     "descPlaceholder": "ex: iPhone 15 Pro, رداء نسائي, Nike Air Max...",
     "descHint": "Français, anglais ou arabe acceptés",
     "valueLabel": "Valeur CIF (€)",
+    "originLabel": "Origine de la marchandise",
+    "originOther": "Autre pays",
+    "originEU": "Union Européenne",
+    "originEUHint": "ALE Maroc-UE : droits d'importation (DI) = 0%. TVA et TPI restent applicables.",
     "calculate": "Calculer les droits",
     "calculating": "Recherche en cours…",
     "disclaimer": "Estimation indicative basée sur la nomenclature tarifaire marocaine en vigueur. Les droits réels peuvent varier selon l'origine, les accords commerciaux (ALE Maroc-UE) et la décision du bureau de douane. Taux de change utilisé : 1 € = 11 MAD."

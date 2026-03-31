@@ -7,7 +7,9 @@
  *   2. pg_trgm trigram similarity  — always available after data import (no model needed)
  *   3. ILIKE text search           — last-resort fallback
  *
- * Body: { description: string, valueEUR: number }
+ * Body: { description: string, valueEUR: number, originEU?: boolean }
+ * If originEU=true (Union Européenne) → DI = 0% (Accord de Libre-Échange Maroc-UE)
+ * TVA et TPI restent inchangés quelle que soit l'origine.
  */
 
 import { NextRequest, NextResponse } from 'next/server';
@@ -124,12 +126,15 @@ async function hasData(): Promise<boolean> {
 }
 
 // ─── Calculate taxes ─────────────────────────────────────────────────────────
-function calcTaxes(row: HsRow, valueEUR: number) {
+function calcTaxes(row: HsRow, valueEUR: number, originEU = false) {
   const valueCIF_MAD = valueEUR * EUR_TO_MAD;
   const tvaRate = getTVARate(row.hsCode);
   const copyright = hasCopyright(row.hsCode);
 
-  const DI_amount        = valueCIF_MAD * (row.diRate / 100);
+  // ALE Maroc-UE: DI = 0% pour les produits originaires de l'Union Européenne
+  const effectiveDiRate  = originEU ? 0 : row.diRate;
+
+  const DI_amount        = valueCIF_MAD * (effectiveDiRate / 100);
   const TPI_amount       = valueCIF_MAD * (TPI_RATE / 100);
   const TVA_base         = valueCIF_MAD + DI_amount + TPI_amount;
   const TVA_amount       = TVA_base * (tvaRate / 100);
@@ -141,14 +146,15 @@ function calcTaxes(row: HsRow, valueEUR: number) {
     description: row.description,
     unit:        row.unit,
     confidence:  Math.round((row.similarity ?? 0.5) * 100) / 100,
+    originEU,
     rates: {
-      DI: row.diRate, TVA: tvaRate, TPI: TPI_RATE,
+      DI: effectiveDiRate, DI_nominal: row.diRate, TVA: tvaRate, TPI: TPI_RATE,
       copyright: copyright ? COPYRIGHT_RATE : 0,
     },
     breakdown: {
       valueEUR,
       valueMAD:         Math.round(valueCIF_MAD),
-      DI_rate:          `${row.diRate}%`,
+      DI_rate:          originEU ? '0% (ALE UE)' : `${row.diRate}%`,
       DI_MAD:           Math.round(DI_amount),
       TPI_rate:         `${TPI_RATE}%`,
       TPI_MAD:          Math.round(TPI_amount),
@@ -167,7 +173,7 @@ function calcTaxes(row: HsRow, valueEUR: number) {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { description, valueEUR } = body as { description: string; valueEUR: number };
+    const { description, valueEUR, originEU } = body as { description: string; valueEUR: number; originEU?: boolean };
 
     if (!description || typeof description !== 'string' || description.trim().length < 2) {
       return NextResponse.json({ error: 'description is required (min 2 chars)' }, { status: 400 });
@@ -222,11 +228,13 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Aucun résultat trouvé pour ce descriptif.' }, { status: 404 });
     }
 
-    const matches = rows.map(r => calcTaxes(r, valueEUR));
+    const isEuOrigin = originEU === true;
+    const matches = rows.map(r => calcTaxes(r, valueEUR, isEuOrigin));
 
     return NextResponse.json({
       query,
       strategy,
+      originEU: isEuOrigin,
       eurToMad:     EUR_TO_MAD,
       bestMatch:    matches[0],
       alternatives: matches.slice(1),
